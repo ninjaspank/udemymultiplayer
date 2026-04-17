@@ -47,11 +47,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ConnectionButtons.cs" />
     <Compile Include="Assets\Scripts\TestScript.cs" />
+    <Compile Include="Assets\Scripts\Core\Player\ProjectileLauncher.cs" />
+    <Compile Include="Assets\Scripts\Util\Lifetime.cs" />
     <Compile Include="Assets\Scripts\Util\ClientNetworkTransform.cs" />
     <Compile Include="Assets\Scripts\Core\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Input\InputReader.cs" />
     <Compile Include="Assets\Scripts\Core\Player\PlayerAiming.cs" />
     <Compile Include="Assets\Scripts\Input\Controls.cs" />
+    <Compile Include="Assets\Scripts\Util\DestroySelfOnContact.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
