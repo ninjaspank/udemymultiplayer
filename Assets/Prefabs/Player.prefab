@@ -94,7 +94,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7316953422221644715}
   - component: {fileID: 4057618178144233687}
-  - component: {fileID: 7114345149664192367}
+  - component: {fileID: 6285317676127576780}
+  - component: {fileID: 5328505224676919146}
+  - component: {fileID: 982559360239831212}
+  - component: {fileID: 4303540697013353766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -140,7 +143,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &7114345149664192367
+--- !u!114 &6285317676127576780
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 863106366296624158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: dfdea5856bdf89047936b04594d28e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -171,6 +174,64 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!50 &5328505224676919146
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863106366296624158}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &982559360239831212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863106366296624158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c1dc80c6455b148a32d045575162eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 52226391abb7c2c44917f57a4caedafb, type: 2}
+  bodyTransform: {fileID: 3467644938772462501}
+  rb: {fileID: 5328505224676919146}
+  movementSpeed: 5
+  turningRate: 270
+--- !u!114 &4303540697013353766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863106366296624158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f70d714a775044b86f2d57928e61d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputReader: {fileID: 11400000, guid: 52226391abb7c2c44917f57a4caedafb, type: 2}
+  turretTransform: {fileID: 571750317931843384}
 --- !u!1 &2954492139761757405
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3467644938772462501}
   - component: {fileID: 3505089714146647824}
-  - component: {fileID: 4295506368826391029}
+  - component: {fileID: 5979115555530524653}
   - component: {fileID: 4120099417851993660}
   m_Layer: 0
   m_Name: TankTreads
@@ -258,7 +319,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4295506368826391029
+--- !u!114 &5979115555530524653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,7 +328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2954492139761757405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: dfdea5856bdf89047936b04594d28e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
@@ -343,7 +404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 571750317931843384}
-  - component: {fileID: 4627874991881645889}
+  - component: {fileID: 4747625464529649228}
   m_Layer: 0
   m_Name: TurretPivot
   m_TagString: Untagged
@@ -367,7 +428,7 @@ Transform:
   - {fileID: 1412227550312001}
   m_Father: {fileID: 7316953422221644715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4627874991881645889
+--- !u!114 &4747625464529649228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,7 +437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5394189670903555516}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: dfdea5856bdf89047936b04594d28e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UseUnreliableDeltas: 0
