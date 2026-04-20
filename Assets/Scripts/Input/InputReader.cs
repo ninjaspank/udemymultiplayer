@@ -36,7 +36,7 @@ public class InputReader : ScriptableObject, IPlayerActions
         {
             PrimaryFireEvent?.Invoke(true);
         }
-        else if (context.performed)
+        else if (context.canceled)
         {
             PrimaryFireEvent?.Invoke(false);
         }
